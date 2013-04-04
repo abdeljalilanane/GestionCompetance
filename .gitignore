@@ -1,7 +1,7 @@
 .DS_Store
 
-assets/
+assets/*
 
-protected/runtime/
+protected/runtime/*
 
-themes/classic/views/
+themes/classic/views/*
