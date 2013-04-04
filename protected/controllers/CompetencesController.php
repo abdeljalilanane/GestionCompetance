@@ -69,7 +69,10 @@ class CompetencesController extends Controller
 
 		if(isset($_POST['Competences']))
 		{
+                    
 			$model->attributes=$_POST['Competences'];
+                        $libellet = Competences::model()->findAllByAttributes($model->libelle);
+                        print_r($libellet);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

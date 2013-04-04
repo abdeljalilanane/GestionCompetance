@@ -9,6 +9,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Gestion Competance',
 	'theme'=>'shadow_dancer',
+	//'theme'=>'newssourcefinal',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
