@@ -13,9 +13,7 @@
 
 <h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i> Dashboard</h1>
 
-<div class="flash-error"></div>
-<div class="flash-notice"></div>
-<div class="flash-success"></div> 
+
 <div class="span-23 showgrid">
 <div class="dashboardIcons span-16">
     <div class="dashIcon span-3">
@@ -24,7 +22,7 @@
     </div>
     
     <div class="dashIcon span-3">
-        <a href="#"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/big_icons/icon-shopping-cart2.png" alt="Order History" /></a>
+        <a href="#"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/big_icons/icon-cloud-sun.png" alt="Order History" /></a>
         <div class="dashIconText"><a href="#">Order History</a></div>
     </div>
     
@@ -174,8 +172,6 @@ $this->beginWidget('zii.widgets.CPortlet', array(
 </div>
 
 
-<div class="flash-notice span-22 last">
-<p></p>
-</div>
+
 
 </div>
