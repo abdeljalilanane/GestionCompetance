@@ -5,12 +5,8 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('cin')); ?>:</b>
-	<?php echo CHtml::encode($data->cin); ?>
+	<?php echo CHtml::link(CHtml::encode($data->cin), array('view', 'id'=>$data->cin)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('NOM')); ?>:</b>
@@ -21,8 +17,8 @@
 	<?php echo CHtml::encode($data->Prenom); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Email')); ?>:</b>
-	<?php echo CHtml::encode($data->Email); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
+	<?php echo CHtml::encode($data->email); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Tel')); ?>:</b>
@@ -33,11 +29,9 @@
 	<?php echo CHtml::encode($data->login); ?>
 	<br />
 
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('motpasse')); ?>:</b>
-	<?php echo CHtml::encode($data->motpasse); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
+	<?php echo CHtml::encode($data->password); ?>
 	<br />
 
-	*/ ?>
 
 </div>

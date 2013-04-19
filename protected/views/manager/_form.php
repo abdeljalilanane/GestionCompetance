@@ -8,7 +8,8 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'manager-form',
-	'enableAjaxValidation'=>false,
+	'enableAjaxValidation'=>true,
+	
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -34,9 +35,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Email'); ?>
-		<?php echo $form->textField($model,'Email',array('size'=>60,'maxlength'=>200)); ?>
-		<?php echo $form->error($model,'Email'); ?>
+		<?php echo $form->labelEx($model,'email'); ?>
+		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>200)); ?>
+		<?php echo $form->error($model,'email'); ?>
 	</div>
 
 	<div class="row">
@@ -52,9 +53,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'motpasse'); ?>
-		<?php echo $form->passwordField($model,'motpasse',array('size'=>60,'maxlength'=>200)); ?>
-		<?php echo $form->error($model,'motpasse'); ?>
+		<?php echo $form->labelEx($model,'password'); ?>
+		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>200)); ?>
+		<?php echo $form->error($model,'password'); ?>
 	</div>
 
 	<div class="row buttons">

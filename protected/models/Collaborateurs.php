@@ -1,23 +1,20 @@
 <?php
 
 /**
- * This is the model class for table "manager".
+ * This is the model class for table "collaborateurs".
  *
- * The followings are the available columns in table 'manager':
+ * The followings are the available columns in table 'collaborateurs':
  * @property string $cin
- * @property string $NOM
- * @property string $Prenom
- * @property string $email
- * @property string $Tel
- * @property string $login
- * @property string $password
+ * @property string $nom
+ * @property string $prenom
+ * @property string $service
  */
-class Manager extends CActiveRecord
+class Collaborateurs extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Manager the static model class
+	 * @return Collaborateurs the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -29,7 +26,7 @@ class Manager extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'manager';
+		return 'collaborateurs';
 	}
 
 	/**
@@ -40,12 +37,13 @@ class Manager extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cin, NOM, Prenom, email, Tel, login, password', 'required'),
+			array('cin, nom, prenom, service', 'required'),
 			array('cin', 'length', 'max'=>8),
-			array('NOM, Prenom, email, Tel, login, password', 'length', 'max'=>200),
+			array('nom, prenom', 'length', 'max'=>10),
+			array('service', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('cin, NOM, Prenom, email, Tel, login, password', 'safe', 'on'=>'search'),
+			array('cin, nom, prenom, service', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,12 +65,9 @@ class Manager extends CActiveRecord
 	{
 		return array(
 			'cin' => 'Cin',
-			'NOM' => 'Nom',
-			'Prenom' => 'Prenom',
-			'email' => 'Email',
-			'Tel' => 'Tel',
-			'login' => 'Login',
-			'password' => 'Password',
+			'nom' => 'Nom',
+			'prenom' => 'Prenom',
+			'service' => 'Service',
 		);
 	}
 
@@ -88,12 +83,9 @@ class Manager extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('cin',$this->cin,true);
-		$criteria->compare('NOM',$this->NOM,true);
-		$criteria->compare('Prenom',$this->Prenom,true);
-		$criteria->compare('email',$this->email,true);
-		$criteria->compare('Tel',$this->Tel,true);
-		$criteria->compare('login',$this->login,true);
-		$criteria->compare('password',$this->password,true);
+		$criteria->compare('nom',$this->nom,true);
+		$criteria->compare('prenom',$this->prenom,true);
+		$criteria->compare('service',$this->service,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

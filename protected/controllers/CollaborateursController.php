@@ -1,6 +1,6 @@
 <?php
 
-class ManagerController extends Controller
+class CollaborateursController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -62,17 +62,16 @@ class ManagerController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Manager;
+		$model=new Collaborateurs;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Manager']))
+		if(isset($_POST['Collaborateurs']))
 		{
-			$model->attributes=$_POST['Manager'];
-			if($model->validate()){
+			$model->attributes=$_POST['Collaborateurs'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->cin));}
+				$this->redirect(array('view','id'=>$model->cin));
 		}
 
 		$this->render('create',array(
@@ -92,9 +91,9 @@ class ManagerController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Manager']))
+		if(isset($_POST['Collaborateurs']))
 		{
-			$model->attributes=$_POST['Manager'];
+			$model->attributes=$_POST['Collaborateurs'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->cin));
 		}
@@ -123,7 +122,7 @@ class ManagerController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Manager');
+		$dataProvider=new CActiveDataProvider('Collaborateurs');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -134,10 +133,10 @@ class ManagerController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Manager('search');
+		$model=new Collaborateurs('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Manager']))
-			$model->attributes=$_GET['Manager'];
+		if(isset($_GET['Collaborateurs']))
+			$model->attributes=$_GET['Collaborateurs'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -151,7 +150,7 @@ class ManagerController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Manager::model()->findByPk($id);
+		$model=Collaborateurs::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -163,7 +162,7 @@ class ManagerController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='manager-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='collaborateurs-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

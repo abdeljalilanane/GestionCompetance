@@ -77,6 +77,7 @@
 				array('label'=>'Type Competences', 'url'=>array('/typeComp/admin')),
 				array('label'=>'Manager', 'url'=>array('/manager/admin')),
 				array('label'=>'Service Supervise', 'url'=>array('/servicesupervise/admin')),
+				array('label'=>'Collaborateurs', 'url'=>array('/collaborateurs/admin')),
 			),
 		)); ?>
 	</div> <!--mainmenu -->

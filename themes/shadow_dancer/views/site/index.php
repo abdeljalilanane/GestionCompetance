@@ -170,8 +170,54 @@ $this->beginWidget('zii.widgets.CPortlet', array(
 </div>
 <?php $this->endWidget();?>
 </div>
+</div>
 
 
 
 
+<div class="span-22 last">
+<?php
+$this->beginWidget('zii.widgets.CPortlet', array(
+    'title'=>'Line Chart',
+));
+?>
+<div class="chart3">
+    <div>
+        <div class="text">
+            <table class="myChart">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>01/04/2013</th>
+                        <th>04/02/2013</th>
+                        <th>06/02/2013</th>
+                        <th>12/02/2013</th>
+                        <th>14/02/2013</th>
+                        <th>18/02/2013</th>
+                        
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>Charge de travaille Totale est : 115</th>
+                        <td>115</td>
+                        <td>94</td>
+                        <td>81</td>
+                        <td>41</td>
+                        <td>21</td>
+                        <td>0</td>
+                        
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+            
+        </div>
+    </div>
+</div>
+<?php $this->endWidget();?>
+</div>
 </div>
