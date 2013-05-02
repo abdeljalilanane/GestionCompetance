@@ -41,7 +41,7 @@ class Competences extends CActiveRecord
 			array('libelle, type, Groupe', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, libelle, type, Groupe', 'safe', 'on'=>'search'),
+			array('libelle, type, Groupe', 'safe', 'on'=>'search'),
 		);
 	}
 

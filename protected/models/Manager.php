@@ -41,11 +41,19 @@ class Manager extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('cin, NOM, Prenom, email, Tel, login, password', 'required'),
-			array('cin', 'length', 'max'=>8),
-			array('NOM, Prenom, email, Tel, login, password', 'length', 'max'=>200),
+			array('cin,Tel', 'length', 'max'=>8),
+                    
+			array('NOM, Prenom, email, login, password', 'length', 'max'=>200),
+                      //array('password','passwordalphanumeric','on'=>'changepassword'), 
+                        array('email', 'email'),
+                        array('cin', 'match' ,'pattern'=>'/^[0-9]+$/u','message'=> 'CIN can contain only numeric characters .'),
+                        
+                        array('NOM', 'match' ,'pattern'=>'/^[A-Za-z0-9_]+$/u','message'=> 'Username can contain only alphanumeric characters and hyphens(-).'),
+                        array('Prenom', 'match' ,'pattern'=>'/^[A-Za-z0-9_]+$/u','message'=> 'Username can contain only alphanumeric characters and hyphens(-).'),
+                        array('Tel','match','pattern'=>'/^[1-9]?[0-9]+$/'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('cin, NOM, Prenom, email, Tel, login, password', 'safe', 'on'=>'search'),
+			array('cin, NOM, Prenom, email, Tel, login', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -99,4 +107,14 @@ class Manager extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        public function passwordStrength($attribute,$params)
+{
+    if ($params['strength'] === self::WEAK)
+        $pattern = '/^(?=.*[a-zA-Z0-9]).{5,}$/';  
+    elseif ($params['strength'] === self::STRONG)
+        $pattern = '/^(?=.*\d(?=.*\d))(?=.*[a-zA-Z](?=.*[a-zA-Z])).{5,}$/';  
+ 
+    if(!preg_match($pattern, $this->$attribute))
+      $this->addError($attribute, 'your password is not strong enough!');
+}
 }

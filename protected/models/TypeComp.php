@@ -39,7 +39,7 @@ class TypeComp extends CActiveRecord
 			array('type', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, type', 'safe', 'on'=>'search'),
+			array('type', 'safe', 'on'=>'search'),
 		);
 	}
 

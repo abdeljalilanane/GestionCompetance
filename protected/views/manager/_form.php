@@ -9,6 +9,10 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'manager-form',
 	'enableAjaxValidation'=>true,
+        /*'clientOptions' => array(
+        'validateOnChange'=>true,
+        'validateOnSubmit'=>true,
+    ) */  
 	
 )); ?>
 

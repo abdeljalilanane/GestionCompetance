@@ -189,11 +189,11 @@ $this->beginWidget('zii.widgets.CPortlet', array(
                     <tr>
                         <th>Date</th>
                         <th>01/04/2013</th>
-                        <th>04/02/2013</th>
-                        <th>06/02/2013</th>
-                        <th>12/02/2013</th>
-                        <th>14/02/2013</th>
-                        <th>18/02/2013</th>
+                        <th>04/04/2013</th>
+                        <th>06/04/2013</th>
+                        <th>12/04/2013</th>
+                        <th>14/04/2013</th>
+                        <th>18/04/2013</th>
                         
                     </tr>
                 </thead>
