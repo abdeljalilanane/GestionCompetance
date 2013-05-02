@@ -25,5 +25,7 @@ $this->menu=array(
 		'nom',
 		'prenom',
 		'service',
+		'login',
+		'password',
 	),
 )); ?>

@@ -130,7 +130,7 @@
 <div class="span-22 last">
 <?php
 $this->beginWidget('zii.widgets.CPortlet', array(
-	'title'=>'Line Chart',
+	'title'=>'Sprint 1',
 ));
 ?>
 <div class="chart3">
@@ -178,7 +178,7 @@ $this->beginWidget('zii.widgets.CPortlet', array(
 <div class="span-22 last">
 <?php
 $this->beginWidget('zii.widgets.CPortlet', array(
-    'title'=>'Line Chart',
+    'title'=>'Sprint 2',
 ));
 ?>
 <div class="chart3">
@@ -220,4 +220,48 @@ $this->beginWidget('zii.widgets.CPortlet', array(
 </div>
 <?php $this->endWidget();?>
 </div>
+<div class="span-22 last">
+<?php
+$this->beginWidget('zii.widgets.CPortlet', array(
+    'title'=>'Sprint 3',
+));
+?>
+<div class="chart3">
+    <div>
+        <div class="text">
+            <table class="myChart">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>23/05/2013</th>
+                        <th>24/05/2013</th>
+                        <th>27/05/2013</th>
+                        <th>28/05/2013</th>
+                        <th>30/05/2013</th>
+                        
+                        
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th>Charge de travaille Totale est : 1460 min</th>
+                        <td>1280</td>
+                        <td>1220</td>
+                        <td>1160</td>
+                        <td>980</td>
+                        
+                        <td>800</td>
+                        
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+            
+        </div>
+    </div>
+</div>
+<?php $this->endWidget();?>
 </div>

@@ -986,3 +986,171 @@ Stack trace:
 REQUEST_URI=/GestionCompetance/index.php?r=manager/create
 in /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/controllers/ManagerController.php (72)
 in /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/index.php (13)
+2013/05/02 21:59:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'getion_comp.projet' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `projet`.
+in /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/index.php (13)
+2013/05/02 22:23:59 [error] [exception.CException] exception 'CException' with message 'Property "Manager.mot_de_passe" is not defined.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('mot_de_passe')
+#1 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/components/UserIdentity.php(52): CActiveRecord->__get('mot_de_passe')
+#2 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/validators/CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/validators/CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#6 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/controllers/SiteController.php(94): CModel->validate()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/GestionCompetance/index.php?r=site/login
+HTTP_REFERER=http://localhost/GestionCompetance/index.php?r=site/login
+---
+2013/05/02 22:24:33 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('projet/admin')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/GestionCompetance/index.php?r=projet/admin
+HTTP_REFERER=http://localhost/GestionCompetance/index.php?r=site/login
+---
+2013/05/02 22:25:18 [error] [php] include(Collaborateur.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (/Applications/XAMPP/xamppfiles/htdocs/yii/framework/YiiBase.php:423)
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/components/UserIdentity.php(24): spl_autoload_call()
+#1 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/validators/CInlineValidator.php(43): LoginForm->authenticate()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/validators/CValidator.php(214): CInlineValidator->validateAttribute()
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CModel.php(158): CInlineValidator->validate()
+#5 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/controllers/SiteController.php(94): LoginForm->validate()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(287): SiteController->runAction()
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): SiteController->run()
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/index.php(13): CWebApplication->run()
+REQUEST_URI=/GestionCompetance/index.php?r=site/login
+in /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/components/UserIdentity.php (24)
+in /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/models/LoginForm.php (52)
+in /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/controllers/SiteController.php (94)
+2013/05/02 22:26:10 [error] [exception.CDbException] exception 'CDbException' with message 'Table "collaborateurs" does not have a column named "login".' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/schema/CDbCommandBuilder.php:570
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1458): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/components/UserIdentity.php(24): CActiveRecord->findByAttributes(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/validators/CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/validators/CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#6 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/controllers/SiteController.php(94): CModel->validate()
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('login')
+#12 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('site/login')
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/GestionCompetance/index.php?r=site/login
+HTTP_REFERER=http://localhost/GestionCompetance/index.php?r=site/login
+---
+2013/05/02 22:29:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('projet/admin')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/GestionCompetance/index.php?r=projet/admin
+HTTP_REFERER=http://localhost/GestionCompetance/index.php?r=site/login
+---
+2013/05/02 22:33:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('projet/admin')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/GestionCompetance/index.php?r=projet/admin
+HTTP_REFERER=http://localhost/GestionCompetance/index.php?r=site/login
+---
+2013/05/02 22:41:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/auth/CAccessControlFilter.php:170
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/auth/CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('admin')
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('projet/admin')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/GestionCompetance/index.php?r=projet/admin
+HTTP_REFERER=http://localhost/GestionCompetance/index.php?r=projet/index
+---
+2013/05/02 23:21:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'libelle' in 'order clause'. The SQL statement executed was: SELECT * FROM `manager` `t` ORDER BY libelle.
+in /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/views/vecteurCompetenceProjet/_form.php (6)
+in /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/views/vecteurCompetenceProjet/create.php (18)
+in /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/controllers/VecteurCompetenceProjetController.php (79)
+2013/05/02 23:21:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'libelle' in 'order clause'. The SQL statement executed was: SELECT * FROM `manager` `t` ORDER BY libelle' in /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1291): CDbCommand->queryAll()
+#2 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/db/ar/CActiveRecord.php(1410): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/views/vecteurCompetenceProjet/_form.php(6): CActiveRecord->findAll(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#6 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#7 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/views/vecteurCompetenceProjet/create.php(18): CController->renderPartial('_form', Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(127): require('/Applications/X...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Applications/X...', Array, true)
+#10 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(870): CBaseController->renderFile('/Applications/X...', Array, true)
+#11 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#12 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/protected/controllers/VecteurCompetenceProjetController.php(79): CController->render('create', Array)
+#13 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/actions/CInlineAction.php(50): VecteurCompetenceProjetController->actionCreate()
+#14 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#15 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#17 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(292): CFilterChain->run()
+#21 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(283): CController->run('create')
+#23 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('vecteurCompeten...')
+#24 /Applications/XAMPP/xamppfiles/htdocs/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#25 /Applications/XAMPP/xamppfiles/htdocs/GestionCompetance/index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/GestionCompetance/index.php?r=vecteurCompetenceProjet/create
+HTTP_REFERER=http://localhost/GestionCompetance/index.php?r=site/index
+---

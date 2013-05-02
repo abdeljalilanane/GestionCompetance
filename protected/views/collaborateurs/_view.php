@@ -21,5 +21,13 @@
 	<?php echo CHtml::encode($data->service); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('login')); ?>:</b>
+	<?php echo CHtml::encode($data->login); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('password')); ?>:</b>
+	<?php echo CHtml::encode($data->password); ?>
+	<br />
+
 
 </div>

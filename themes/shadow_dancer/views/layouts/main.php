@@ -64,7 +64,12 @@
     )); */?> --->
 	<div id="mainmenu">
     
-		<?php $this->widget('zii.widgets.CMenu',array(
+		<?php
+                $manager = Manager::model()->findByAttributes(array('login'=>Yii::app()->user->name));
+                $collaborateur=  Collaborateurs::model()->findByAttributes(array('login'=>Yii::app()->user->name));
+               
+                
+                $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				/*array('label'=>'Dashboard', 'url'=>array('/site/index')),
 				array('label'=>'Graphs', 'url'=>array('/site/page', 'view'=>'graphs'),'itemOptions'=>array('class'=>'icon_chart')),
@@ -73,11 +78,17 @@
 				array('label'=>'Buttons & Icons', 'url'=>array('/site/page', 'view'=>'buttons_and_icons')),
 				array('label'=>'Error Pages', 'url'=>array('/site/page', 'view'=>'Demo 404 page')),*/
 				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'Competences', 'url'=>array('/competences/admin')),
-				array('label'=>'Type Competences', 'url'=>array('/typeComp/admin')),
-				array('label'=>'Manager', 'url'=>array('/manager/admin')),
-				array('label'=>'Service Supervise', 'url'=>array('/servicesupervise/admin')),
-				array('label'=>'Collaborateurs', 'url'=>array('/collaborateurs/admin')),
+				array('label'=>'Competences', 'url'=>array('/competences/admin'),'visible'=>!Yii::app()->name=="admin"),
+				array('label'=>'Type Competences', 'url'=>array('/typeComp/admin'),'visible'=>!Yii::app()->name=="admin"),
+				array('label'=>'Manager', 'url'=>array('/manager/admin'),'visible'=>!Yii::app()->name=="admin"),
+				array('label'=>'Service Supervise', 'url'=>array('/servicesupervise/admin'),'visible'=>!Yii::app()->name=="admin"),
+				array('label'=>'Collaborateurs', 'url'=>array('/collaborateurs/admin'),'visible'=>!Yii::app()->name=="admin"),
+                                array('label'=>'Projet', 'url'=>array('/projet/admin'),'visible'=>!Yii::app()->name=="admin"),
+                                array('label'=>'Cree Projet', 'url'=>array('/projet/create'),'visible'=>$manager!=null),
+                                array('label'=>'Vecteur Comp Projet', 'url'=>array('/vecteurCompetenceProjet/create'),'visible'=>$manager!=null),
+                                array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+			
 			),
 		)); ?>
 	</div> <!--mainmenu -->

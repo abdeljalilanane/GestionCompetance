@@ -1,22 +1,20 @@
 <?php
 
 /**
- * This is the model class for table "collaborateurs".
+ * This is the model class for table "projet".
  *
- * The followings are the available columns in table 'collaborateurs':
- * @property string $cin
+ * The followings are the available columns in table 'projet':
+ * @property integer $id
  * @property string $nom
- * @property string $prenom
- * @property string $service
- * @property string $login
- * @property string $password
+ * @property string $type
+ * @property integer $id_manager
  */
-class Collaborateurs extends CActiveRecord
+class Projet extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Collaborateurs the static model class
+	 * @return Projet the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -28,7 +26,7 @@ class Collaborateurs extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'collaborateurs';
+		return 'projet';
 	}
 
 	/**
@@ -39,13 +37,12 @@ class Collaborateurs extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('cin, nom, prenom, service, login, password', 'required'),
-			array('cin', 'length', 'max'=>8),
-			array('nom, prenom', 'length', 'max'=>10),
-			array('service, login, password', 'length', 'max'=>100),
+			array('nom, type, id_manager', 'required'),
+			array('id_manager', 'numerical', 'integerOnly'=>true),
+			array('nom, type', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('cin, nom, prenom, service, login, password', 'safe', 'on'=>'search'),
+			array('id, nom, type, id_manager', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,12 +63,10 @@ class Collaborateurs extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'cin' => 'Cin',
+			'id' => 'ID',
 			'nom' => 'Nom',
-			'prenom' => 'Prenom',
-			'service' => 'Service',
-			'login' => 'Login',
-			'password' => 'Password',
+			'type' => 'Type',
+			'id_manager' => 'Id Manager',
 		);
 	}
 
@@ -86,12 +81,10 @@ class Collaborateurs extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('cin',$this->cin,true);
+		$criteria->compare('id',$this->id);
 		$criteria->compare('nom',$this->nom,true);
-		$criteria->compare('prenom',$this->prenom,true);
-		$criteria->compare('service',$this->service,true);
-		$criteria->compare('login',$this->login,true);
-		$criteria->compare('password',$this->password,true);
+		$criteria->compare('type',$this->type,true);
+		$criteria->compare('id_manager',$this->id_manager);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
