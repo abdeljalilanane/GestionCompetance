@@ -2,6 +2,8 @@
 /* @var $this ProjetController */
 /* @var $model Projet */
 /* @var $form CActiveForm */
+$id=  Manager::model()->findAllByAttributes(array('login'=>Yii::app()->user->name));
+$listcin = CHtml::listData($id,'cin','login');
 ?>
 
 <div class="form">
@@ -29,7 +31,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'id_manager'); ?>
-		<?php echo $form->textField($model,'id_manager'); ?>
+                <?php echo $form->dropDownList( $model, 'id_manager',$listcin,array('readonly'=>true));?>
+		<?php //echo $form->textField($model,'id_manager',array('readonly'=>true,'value'=>$listcin)); ?>
 		<?php echo $form->error($model,'id_manager'); ?>
 	</div>
 

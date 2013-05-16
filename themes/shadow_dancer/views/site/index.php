@@ -233,11 +233,15 @@ $this->beginWidget('zii.widgets.CPortlet', array(
                 <thead>
                     <tr>
                         <th>Date</th>
-                        <th>23/05/2013</th>
-                        <th>24/05/2013</th>
-                        <th>27/05/2013</th>
-                        <th>28/05/2013</th>
-                        <th>30/05/2013</th>
+                        <th>23/04/2013</th>
+                        <th>24/04/2013</th>
+                        <th>27/04/2013</th>
+                        <th>28/04/2013</th>
+                        <th>30/04/2013</th>
+                        <th>01/05/2013</th>
+                        <th>03/05/2013</th>
+                        <th>05/05/2013</th>
+                        <th>09/05/2013</th>
                         
                         
                     </tr>
@@ -250,8 +254,11 @@ $this->beginWidget('zii.widgets.CPortlet', array(
                         <td>1220</td>
                         <td>1160</td>
                         <td>980</td>
-                        
                         <td>800</td>
+                        <td>500</td>
+                        <td>200</td>
+                        <td>20</td>
+                        <td>0</td>
                         
                         
                     </tr>
